@@ -45,3 +45,4 @@ export class User {
 
 export type UserDocument = User & Document;
 export const UserSchema = SchemaFactory.createForClass(User);
+UserSchema.index({ 'otherInfo.Comment': 'text', 'otherInfo.IP': 'text' });
